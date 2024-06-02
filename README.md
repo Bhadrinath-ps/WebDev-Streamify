@@ -1,8 +1,8 @@
-# Streamify - 🎬🎵 Movie and Song Streaming Platform
+# Streamify - 🎬🎵 Movies and Songs Streaming Platform
 
 ## Project Overview 🌐
 
-**Streamify** is an innovative Movie and Song Streaming Platform developed using HTML, CSS, and JavaScript. It provides users with a seamless and intuitive platform to browse, select, and stream their favorite movies and songs. It focuses on delivering an exceptional user experience with responsive design and smooth playback.
+**Streamify** is an innovative Movies and Songs Streaming Platform developed using HTML, CSS, and JavaScript. It provides users with a seamless and intuitive platform to browse, select, and stream their favorite movies and songs. It focuses on delivering an exceptional user experience with responsive design and smooth playback.
 
 ## Technologies Used 🛠️
 
@@ -29,6 +29,13 @@
 - **Browse Movies and Songs**: 🎬🎵 Navigate through the available movies and songs using the user-friendly interface.
 - **Stream Content**: 📺🎧 Click on a movie or song to start streaming instantly.
 - **Search**: 🔍 Utilize the search bar to quickly find specific movies or songs.
+
+## Access Information 🔐
+
+- **Username**: Badhri
+- **Password**: Badhri@17
+
+Use the above credentials to access the platform directly.
 
 ## Note 📝
 
