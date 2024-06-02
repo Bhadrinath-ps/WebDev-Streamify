@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoodNight Movie</title>
+
+    <link rel="stylesheet" href="Styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="shortcut icon" href="/MusicProject/Assets/Background/Tab-Icon.png" type="image/x-icon">
+
+    <style>
+        .main-pic {
+            background-image: url("/MusicProject/Assets/Movies-Container/Movie-Info/GoodNight-BG.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-blend-mode: multiply;
+            background-color: rgba(0, 0, 0, 0.16);
+        }
+
+        .movie-info img {
+            margin: -65px 0 -10px -5px;
+            width: 380px;
+        }
+
+        .movie-details {
+            display: flex;
+            width: 550px;
+            align-items: center;
+            margin-left: 120px;
+            padding: 158.5px 30px 98px 0;
+            transition: border-color 0.6s ease;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <nav class="main-nav">
+        <ul class="nav-list">
+            <li class="nav-logo"><img src="/MusicProject/Assets/Background/Logo.png"
+                alt="app-logo"><span>Streamify</span></li>
+        </ul>
+        <ul class="nav-list">
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">Originals</a></li>
+            <li><a href="#">Series</a></li>
+        </ul>
+        <ul class="nav-list">
+            <li class="search-form">
+                <form action="">
+                    <input type="text" name="search" id="search" placeholder="Search Your Favourites">
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="main-content">
+            <div class="main-pic">
+
+                <div class="movie-details">
+                    <div class="movie-info">
+                        <img src="/MusicProject/Assets/Movies-Container/Movie-Info/GoodNight-Title-Card.png"
+                            class="movie-title">
+                        <div class="movie-description">
+                            <p>A simple boy-next-door character whose biggest problem in life is his snoring. He falls
+                                in love with a girl and how the couple overcome his sleeping problem while living
+                                together.</p>
+                        </div>
+                        <div class="movie-card">
+                            <p><span>2023</span> &#9679; <span class="rated">U</span> &#9679; <span>2h 22m</span>
+                            </p>
+                        </div>
+                        <div class="genres">
+                            <p> Romance | Comedy | Drama | Emotion</p>
+                        </div>
+                        <div class="languages">
+                            <input type="radio" id="languages1" name="languages" value="Tamil">
+                            <label for="languages1">Tamil</label>
+
+                            <input type="radio" id="languages1" name="languages" value="Telugu">
+                            <label for="languages1">Telugu</label>
+
+                            <input type="radio" id="languages2" name="languages" value="Hindi">
+                            <label for="languages2">Hindi</label>
+
+                            <input type="radio" id="languages3" name="languages" value="Malayalam">
+                            <label for="languages3">Malayalam</label>
+                        </div>
+                        <a href="#trailer"><button class="watch-button">Watch Now</button></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="video-container" id="trailer">
+                <div class="video-wrapper">
+                    <iframe width="751" height="416.5"
+                        src="https://www.youtube.com/embed/W1JzR8muGn4?si=D77p_29orRdCo4Kb" frameborder="0"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="video-wrapper">
+                    <iframe width="751" height="416.5"
+                        src="https://www.youtube.com/embed/W1JzR8muGn4?si=D77p_29orRdCo4Kb" frameborder="0"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- Cast Section -->
+            <div class="movie-extracontent">
+                <div class="cast-container">
+                    <h2 class="cast-title">Cast</h2>
+                    <div class="cast-list">
+
+                        <!-- Cast Member 1 -->
+                        <div class="cast-wrapper">
+                            <img src="https://m.media-amazon.com/images/M/MV5BNDYwZWVjYzYtN2RlNi00ZjZmLWE4ZTAtZGI4MDhjOWNiOTJkXkEyXkFqcGdeQXVyMjYwMDk5NjE@._V1_FMjpg_UX1000_.jpg"
+                                alt="Cast Member 1" class="cast-image">
+                            <div class="cast-details">
+                                <p class="cast-name">Manikandan</p>
+                                <p class="cast-role">Mohan</p>
+                            </div>
+                        </div>
+
+                        <!-- Cast Member 2 -->
+                        <div class="cast-wrapper">
+                            <img src="https://superstarsbio.com/wp-content/uploads/2020/02/Ramesh-Thilak-facts.jpg"
+                                alt="Cast Member 2" class="cast-image">
+                            <div class="cast-details">
+                                <p class="cast-name">Ramesh Thilak</p>
+                                <p class="cast-role">Ramesh</p>
+                            </div>
+                        </div>
+
+                        <!-- Cast Member 3 -->
+                        <div class="cast-wrapper">
+                            <img src="https://static.toiimg.com/photo/100933632.cms" alt="Cast Member 3"
+                                class="cast-image">
+                            <div class="cast-details">
+                                <p class="cast-name">Meetha Raghunath</p>
+                                <p class="cast-role">Anu</p>
+                            </div>
+                        </div>
+
+                        <!-- Cast Member 4 -->
+                        <div class="cast-wrapper">
+                            <img src="https://gumlet.vikatan.com/vikatan%2F2019-05%2Fffda1807-eef0-4a25-abd0-989bad14f7cd%2F148789_thumb.jpg?auto=format%2Ccompress&w=1200"
+                                alt="Cast Member 4" class="cast-image">
+                            <div class="cast-details">
+                                <p class="cast-name">Raichal Rabecca</p>
+                                <p class="cast-role">Maha</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reviews Section -->
+                <div class="reviews-container">
+                    <h2 class="reviews-title">Reviews</h2>
+                    <!-- Review 1 -->
+                    <div class="review">
+                        <div class="reviewer-info">
+                            <img src="/MusicProject/Assets/Movies-Container/Movie-Critics/Filmy-Craft-Arun.jpg"
+                                alt="Reviewer 1" class="reviewer-avatar">
+                            <div class="reviewer-details">
+                                <p class="reviewer-name">Filmy Craft</p>
+                                <p class="reviewer-rating">
+                                    <span class="rating-star">&#9733;</span>
+                                    <span class="rating-value">9.0</span>
+                                </p>
+                            </div>
+                        </div>
+                        <p class="review-text">"Great movie! Highly recommended."</p>
+                    </div>
+                    <!-- Review 2 -->
+                    <div class="review">
+                        <div class="reviewer-info">
+                            <img src="/MusicProject/Assets/Movies-Container/Movie-Critics/Tamil-Talkies-Maaran.jpg"
+                                alt="Reviewer 2" class="reviewer-avatar">
+                            <div class="reviewer-details">
+                                <p class="reviewer-name">Tamil Talkies</p>
+                                <p class="reviewer-rating">
+                                    <span class="rating-star">&#9733;</span>
+                                    <span class="rating-value">8.5</span>
+                                </p>
+                            </div>
+                        </div>
+                        <p class="review-text">"A must-watch film! Brilliant performances."</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="similar-action-movies">
+                <div class="movies" id="Romance">
+                    <h1>Other Romance Movies ></h1>
+                    <div class="movie-list">
+                        <div class="movie">
+                            <a href="/MusicProject/Movies-Page/Romantic-Movies/Bachelor-Movie.html">
+                                <img src="/MusicProject/Assets/Movies-Container/Movies-Card/Romantic-Movies-01.jpg"
+                                    alt="Romance Movie 1">
+                                <h3>Bachelor</h3>
+                            </a>
+                        </div>
+                        <div class="movie">
+                            <a href="/MusicProject/Movies-Page/Romantic-Movies/GoodNight-Movie.html">
+                                <img src="/MusicProject/Assets/Movies-Container/Movies-Card/Romantic-Movies-02.jpg"
+                                    alt="Romance Movie 2">
+                                <h3>Good Night</h3>
+                            </a>
+                        </div>
+                        <div class="movie">
+                            <a href="/MusicProject/Movies-Page/Romantic-Movies/Thiruchitrambalam-Movie.html">
+                                <img src="/MusicProject/Assets/Movies-Container/Movies-Card/Romantic-Movies-03.jpg"
+                                    alt="Romance Movie 3">
+                                <h3>Thiruchitrambalam</h3>
+                            </a>
+                        </div>
+                        <div class="movie">
+                            <a href="/MusicProject/Movies-Page/Romantic-Movies/96-Movie.html">
+                                <img src="/MusicProject/Assets/Movies-Container/Movies-Card/Romantic-Movies-04.jpg"
+                                    alt="Romance Movie 4">
+                                <h3>96</h3>
+                            </a>
+                        </div>
+                        <div class="movie">
+                            <a href="/MusicProject/Movies-Page/Romantic-Movies/SabaNayagan-Movie.html">
+                                <img src="/MusicProject/Assets/Movies-Container/Movies-Card/Romantic-Movies-05.jpg"
+                                    alt="Romance Movie 5">
+                                <h3>Saba Nayagan</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+</body>
+
+</html>

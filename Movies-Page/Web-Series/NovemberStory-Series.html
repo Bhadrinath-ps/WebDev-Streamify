@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovemberStory Series</title>
+
+    <link rel="stylesheet" href="Styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="shortcut icon" href="/MusicProject/Assets/Background/Tab-Icon.png" type="image/x-icon">
+
+    <style>
+        .main-pic {
+            background-image: url("/MusicProject/Assets/Movies-Container/Movie-Info/NovemberStory-BG.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-blend-mode: multiply;
+            background-color: rgba(0, 0, 0, 0.28);
+        }
+
+        .movie-info img {
+            margin: -55px 0 -15px -8px;
+            width: 410px;
+        }
+
+        .movie-details {
+            display: flex;
+            width: 600px;
+            align-items: center;
+            margin-left: 120px;
+            padding: 157px 30px 132px 0px;
+            transition: border-color 0.6s ease;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <nav class="main-nav">
+        <ul class="nav-list">
+            <li class="nav-logo"><img src="/MusicProject/Assets/Background/Logo.png"
+                alt="app-logo"><span>Streamify</span></li>
+        </ul>
+        <ul class="nav-list">
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">Originals</a></li>
+            <li><a href="#">Series</a></li>
+        </ul>
+        <ul class="nav-list">
+            <li class="search-form">
+                <form action="">
+                    <input type="text" name="search" id="search" placeholder="Search Your Favourites">
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="main-content">
+            <div class="main-pic">
+
+                <div class="movie-details">
+                    <div class="movie-info">
+                        <img src="/MusicProject/Assets/Movies-Container/Movie-Info/NovemberStory-Title-Card.png"
+                            class="movie-title">
+                        <div class="movie-description">
+                            <p>A celebrated crime novelist suffering from Alzheimer's is found at a murder scene with no
+                                memory of what happened. Now, it is up to his daughter to save him.</p>
+                        </div>
+                        <div class="movie-card">
+                            <p><span>2021</span> &#9679; <span class="rated">A 18+</span> &#9679; <span>7
+                                    Episodes</span>
+                            </p>
+                        </div>
+                        <div class="genres">
+                            <p> Crime | Thriller | Mystery | Suspense</p>
+                        </div>
+                        <div class="languages">
+                            <input type="radio" id="languages1" name="languages" value="Tamil">
+                            <label for="languages1">Tamil</label>
+
+                            <input type="radio" id="languages1" name="languages" value="Telugu">
+                            <label for="languages1">Telugu</label>
+
+                            <input type="radio" id="languages1" name="languages" value="Hindi">
+                            <label for="languages1">Hindi</label>
+
+                            <input type="radio" id="languages1" name="languages" value="Bengali">
+                            <label for="languages1">Bengali</label>
+
+                            <input type="radio" id="languages1" name="languages" value="Malayalam">
+                            <label for="languages1">Malayalam</label>
+                        </div>
+                        <a href="#trailer"><button class="watch-button">Watch Now</button></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="video-container" id="trailer">
+                <div class="video-wrapper">
+                    <iframe width="751" height="416.5"
+                        src="https://www.youtube.com/embed/oqu3rHAkzRo?si=qtcpkkU5H_SQUkMg" frameborder="0"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="video-wrapper">
+                    <iframe width="751" height="416.5"
+                        src="https://www.youtube.com/embed/JX4TPVJeF0g?si=afMB_kPEttud81pH" frameborder="0"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- Cast Section -->
+            <div class="movie-extracontent">
+                <div class="cast-container">
+                    <h2 class="cast-title">Cast</h2>
+                    <div class="cast-list">
+
+                        <!-- Cast Member 1 -->
+                        <div class="cast-wrapper">
+                            <img src="https://desktopbackground.org/p/2012/03/17/360207_tamanna-hot-bikini-wallpapers-full-hd_650x884_h.jpg"
+                                alt="Cast Member 1" class="cast-image">
+                            <div class="cast-details">
+                                <p class="cast-name">Tamannaah Bhatia</p>
+                                <p class="cast-role">Anuradha</p>
+                            </div>
+                        </div>
+
+                        <!-- Cast Member 2 -->
+                        <div class="cast-wrapper">
+                            <img src="https://movie.webindia123.com/movie/events/kathirwedding/kathirwedding1.jpg"
+                                alt="Cast Member 2" class="cast-image">
+                            <div class="cast-details">
+                                <p class="cast-name">G.M. Kumar</p>
+                                <p class="cast-role">Ganesan</p>
+                            </div>
+                        </div>
+
+                        <!-- Cast Member 3 -->
+                        <div class="cast-wrapper">
+                            <img src="https://imageory.clapnumber.com/albums/medium/1620132546_VivekPrasanna2.jpg"
+                                alt="Cast Member 3" class="cast-image">
+                            <div class="cast-details">
+                                <p class="cast-name">Vivek Prasanna</p>
+                                <p class="cast-role">Malarmannan</p>
+                            </div>
+                        </div>
+
+                        <!-- Cast Member 4 -->
+                        <div class="cast-wrapper">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Pasupathy_at_Anjala_Audio_Launch.jpg"
+                                alt="Cast Member 4" class="cast-image">
+                            <div class="cast-details">
+                                <p class="cast-name">Pasupathy</p>
+                                <p class="cast-role">Kuzhandhai Yesu</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reviews Section -->
+                <div class="reviews-container">
+                    <h2 class="reviews-title">Reviews</h2>
+                    <!-- Review 1 -->
+                    <div class="review">
+                        <div class="reviewer-info">
+                            <img src="/MusicProject/Assets/Movies-Container/Movie-Critics/Filmy-Craft-Arun.jpg"
+                                alt="Reviewer 1" class="reviewer-avatar">
+                            <div class="reviewer-details">
+                                <p class="reviewer-name">Filmy Craft</p>
+                                <p class="reviewer-rating">
+                                    <span class="rating-star">&#9733;</span>
+                                    <span class="rating-value">9.0</span>
+                                </p>
+                            </div>
+                        </div>
+                        <p class="review-text">"Great movie! Highly recommended."</p>
+                    </div>
+                    <!-- Review 2 -->
+                    <div class="review">
+                        <div class="reviewer-info">
+                            <img src="/MusicProject/Assets/Movies-Container/Movie-Critics/Tamil-Talkies-Maaran.jpg"
+                                alt="Reviewer 2" class="reviewer-avatar">
+                            <div class="reviewer-details">
+                                <p class="reviewer-name">Tamil Talkies</p>
+                                <p class="reviewer-rating">
+                                    <span class="rating-star">&#9733;</span>
+                                    <span class="rating-value">8.5</span>
+                                </p>
+                            </div>
+                        </div>
+                        <p class="review-text">"A must-watch film! Brilliant performances."</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="similar-action-movies">
+                <div class="movies" id="tv-shows">
+                    <h1>Other Web Series ></h1>
+                    <div class="movie-list">
+                        <div class="movie">
+                            <a href="/MusicProject/Movies-Page/Web-Series/PaperRocket-Series.html">
+                                <img src="/MusicProject/Assets/Movies-Container/Movies-Card/Web-Series-01.jpg"
+                                    alt="web series 1">
+                                <h3>Paper Rocket</h3>
+                            </a>
+                        </div>
+                        <div class="movie">
+                            <a href="/MusicProject/Movies-Page/Web-Series/Farzi-Series.html">
+                                <img src="/MusicProject/Assets/Movies-Container/Movies-Card/Web-Series-02.jpg"
+                                    alt="web series 2">
+                                <h3>Farzi</h3>
+                            </a>
+                        </div>
+                        <div class="movie">
+                            <a href="/MusicProject/Movies-Page/Web-Series/Vadhandhi-Series.html">
+                                <img src="/MusicProject/Assets/Movies-Container/Movies-Card/Web-Series-03.jpg"
+                                    alt="web series 3">
+                                <h3>Vadhandhi</h3>
+                            </a>
+                        </div>
+                        <div class="movie">
+                            <a href="/MusicProject/Movies-Page/Web-Series/NovemberStory-Series.html">
+                                <img src="/MusicProject/Assets/Movies-Container/Movies-Card/Web-Series-04.jpg"
+                                    alt="web series 4">
+                                <h3>November Story</h3>
+                            </a>
+                        </div>
+                        <div class="movie">
+                            <a href="/MusicProject/Movies-Page/Web-Series/Ayali-Series.html">
+                                <img src="/MusicProject/Assets/Movies-Container/Movies-Card/Web-Series-05.jpg"
+                                    alt="web series 5">
+                                <h3>Ayali</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+</body>
+
+</html>

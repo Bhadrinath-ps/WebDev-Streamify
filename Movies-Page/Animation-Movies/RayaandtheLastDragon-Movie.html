@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RayaAndTheLastDragon Movie</title>
+
+    <link rel="stylesheet" href="Styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="shortcut icon" href="/MusicProject/Assets/Background/Tab-Icon.png" type="image/x-icon">
+
+    <style>
+        .main-pic {
+            background-image: url("/MusicProject/Assets/Movies-Container/Movie-Info/RayaAndTheLastDragon-BG.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-blend-mode: multiply;
+            background-color: rgba(0, 0, 0, 0.18);
+        }
+
+        .movie-info img {
+            margin: -55px 0 -12px -7px;
+            width: 320px;
+        }
+
+        .movie-details {
+            display: flex;
+            width: 600px;
+            align-items: center;
+            margin-left: 120px;
+            padding: 108px 30px 110px 0;
+            transition: border-color 0.6s ease;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <nav class="main-nav">
+        <ul class="nav-list">
+            <li class="nav-logo"><img src="/MusicProject/Assets/Background/Logo.png"
+                alt="app-logo"><span>Streamify</span></li>
+        </ul>
+        <ul class="nav-list">
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">Originals</a></li>
+            <li><a href="#">Series</a></li>
+        </ul>
+        <ul class="nav-list">
+            <li class="search-form">
+                <form action="">
+                    <input type="text" name="search" id="search" placeholder="Search Your Favourites">
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="main-content">
+            <div class="main-pic">
+
+                <div class="movie-details">
+                    <div class="movie-info">
+                        <img src="/MusicProject/Assets/Movies-Container/Movie-Info/RayaAndTheLastDragon-Title-Card.png"
+                            class="movie-title">
+                        <div class="movie-description">
+                            <p>In a realm known as Kumandra, a re-imagined Earth inhabited by an ancient civilization, a
+                                warrior named Raya is determined to find the last dragon.</p>
+                        </div>
+                        <div class="movie-card">
+                            <p><span>2021</span> &#9679; <span class="rated">PG</span> &#9679; <span>1h 47m</span>
+                            </p>
+                        </div>
+                        <div class="genres">
+                            <p> Animation | Kids | Adventure | Fantasy</p>
+                        </div>
+                        <div class="languages">
+                            <input type="radio" id="languages1" name="languages" value="Tamil">
+                            <label for="languages1">Tamil</label>
+
+                            <input type="radio" id="languages1" name="languages" value="Telugu">
+                            <label for="languages1">Telugu</label>
+
+                            <input type="radio" id="languages2" name="languages" value="Hindi">
+                            <label for="languages2">Hindi</label>
+
+                            <input type="radio" id="languages3" name="languages" value="Malayalam">
+                            <label for="languages3">Malayalam</label>
+                        </div>
+                        <a href="#trailer"><button class="watch-button">Watch Now</button></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="video-container" id="trailer">
+                <div class="video-wrapper">
+                    <iframe width="751" height="416.5"
+                        src="https://www.youtube.com/embed/9BPMTr-NS9s?si=BabL1cgNptlQia2d" frameborder="0"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="video-wrapper">
+                    <iframe width="751" height="416.5"
+                        src="https://www.youtube.com/embed/1VIZ89FEjYI?si=pFbrmpoyJJMyzJ2V" frameborder="0"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- Cast Section -->
+            <div class="movie-extracontent">
+                <div class="cast-container">
+                    <h2 class="cast-title">Cast</h2>
+                    <div class="cast-list">
+
+                        <!-- Cast Member 1 -->
+                        <div class="cast-wrapper">
+                            <img src="https://hips.hearstapps.com/hmg-prod/images/shang-chi-star-awkwafina-quits-twitter-on-her-therapist-s-advice-1644242190.png?crop=0.526xw:0.669xh;0.409xw,0.101xh&resize=640:*"
+                                alt="Cast Member 1" class="cast-image">
+                            <div class="cast-details">
+                                <p class="cast-name">Awkwafina</p>
+                                <p class="cast-role">Sisu</p>
+                            </div>
+                        </div>
+
+                        <!-- Cast Member 2 -->
+                        <div class="cast-wrapper">
+                            <img src="https://lumiere-a.akamaihd.net/v1/images/628506bbdbbde50001f99f79-image_c7b87520.jpeg?region=0,0,1536,864&width=768"
+                                alt="Cast Member 2" class="cast-image">
+                            <div class="cast-details">
+                                <p class="cast-name">Kelly Marie Tran</p>
+                                <p class="cast-role">Raya</p>
+                            </div>
+                        </div>
+
+                        <!-- Cast Member 3 -->
+                        <div class="cast-wrapper">
+                            <img src="https://cdn.britannica.com/60/252760-050-4AE17ECD/Gemma-Chan-2023.jpg?w=400&h=300&c=crop"
+                                alt="Cast Member 3" class="cast-image">
+                            <div class="cast-details">
+                                <p class="cast-name">Gemma Chan</p>
+                                <p class="cast-role">Namaari</p>
+                            </div>
+                        </div>
+
+                        <!-- Cast Member 4 -->
+                        <div class="cast-wrapper">
+                            <img src="https://s.yimg.com/ny/api/res/1.2/zWffgp06fkr94K08WExBrQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQyNw--/https://media-mbst-pub-ue1.s3.amazonaws.com/creatr-images/2020-03/eff8fb10-72cf-11ea-bbef-f629aeb3c524"
+                                alt="Cast Member 4" class="cast-image">
+                            <div class="cast-details">
+                                <p class="cast-name">Daniel Dae Kim</p>
+                                <p class="cast-role">Chief Benja</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reviews Section -->
+                <div class="reviews-container">
+                    <h2 class="reviews-title">Reviews</h2>
+                    <!-- Review 1 -->
+                    <div class="review">
+                        <div class="reviewer-info">
+                            <img src="/MusicProject/Assets/Movies-Container/Movie-Critics/Filmy-Craft-Arun.jpg"
+                                alt="Reviewer 1" class="reviewer-avatar">
+                            <div class="reviewer-details">
+                                <p class="reviewer-name">Filmy Craft</p>
+                                <p class="reviewer-rating">
+                                    <span class="rating-star">&#9733;</span>
+                                    <span class="rating-value">9.0</span>
+                                </p>
+                            </div>
+                        </div>
+                        <p class="review-text">"Great movie! Highly recommended."</p>
+                    </div>
+                    <!-- Review 2 -->
+                    <div class="review">
+                        <div class="reviewer-info">
+                            <img src="/MusicProject/Assets/Movies-Container/Movie-Critics/Tamil-Talkies-Maaran.jpg"
+                                alt="Reviewer 2" class="reviewer-avatar">
+                            <div class="reviewer-details">
+                                <p class="reviewer-name">Tamil Talkies</p>
+                                <p class="reviewer-rating">
+                                    <span class="rating-star">&#9733;</span>
+                                    <span class="rating-value">8.5</span>
+                                </p>
+                            </div>
+                        </div>
+                        <p class="review-text">"A must-watch film! Brilliant performances."</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="similar-action-movies">
+                <div class="movies" id="animation">
+                    <h1>Other Animation Movies ></h1>
+                    <div class="movie-list">
+                        <div class="movie">
+                            <a href="/MusicProject/Movies-Page/Animation-Movies/Luca-Movie.html">
+                                <img src="/MusicProject/Assets/Movies-Container/Movies-Card/Animation-Movies-01.jpg"
+                                    alt="Animation Movie 1">
+                                <h3>Luca</h3>
+                            </a>
+                        </div>
+                        <div class="movie">
+                            <a href="/MusicProject/Movies-Page/Animation-Movies/TheMitchellsvs.theMachines-Movie.html">
+                                <img src="/MusicProject/Assets/Movies-Container/Movies-Card/Animation-Movies-02.jpg"
+                                    alt="Animation Movie 2">
+                                <h3>The Mitchells vs. the Machines</h3>
+                            </a>
+                        </div>
+                        <div class="movie">
+                            <a
+                                href="/MusicProject/Movies-Page/Animation-Movies/Spider-ManIntotheSpider-Verse-Movie.html">
+                                <img src="/MusicProject/Assets/Movies-Container/Movies-Card/Animation-Movies-03.jpg"
+                                    alt="Animation Movie 3">
+                                <h3>Spider-Man Into the Spider-Verse</h3>
+                            </a>
+                        </div>
+                        <div class="movie">
+                            <a href="/MusicProject/Movies-Page/Animation-Movies/OrionandtheDark-Movie.html">
+                                <img src="/MusicProject/Assets/Movies-Container/Movies-Card/Animation-Movies-04.jpg"
+                                    alt="Animation Movie 4">
+                                <h3>Orion and the Dark</h3>
+                            </a>
+                        </div>
+                        <div class="movie">
+                            <a href="/MusicProject/Movies-Page/Animation-Movies/RayaandtheLastDragon-Movie.html">
+                                <img src="/MusicProject/Assets/Movies-Container/Movies-Card/Animation-Movies-05.jpg"
+                                    alt="Animation Movie 5">
+                                <h3>Raya and the Last Dragon</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+</body>
+
+</html>

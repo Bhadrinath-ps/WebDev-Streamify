@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streamify Movies</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="shortcut icon" href="/MusicProject/Assets/Background/Tab-Icon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="Dark-Mode-Movie-Page.css" id="darkmode">
+    <link rel="stylesheet" href="Light-Mode-Movie-Page.css" id="lightMode" disabled>
+
+    <script>
+
+        function toggleMode() {
+            const darkMode = document.getElementById('darkmode');
+            const lightMode = document.getElementById('lightMode');
+            darkMode.disabled = !darkMode.disabled;
+            lightMode.disabled = !lightMode.disabled;
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const searchInput = document.getElementById("search");
+            const movieSections = document.querySelectorAll(".movies");
+
+            searchInput.addEventListener("input", function () {
+                const searchTerm = this.value.toLowerCase();
+
+                movieSections.forEach(section => {
+                    const movies = section.querySelectorAll(".movie");
+                    let anyMovieVisible = false;
+
+                    movies.forEach(movie => {
+                        const movieName = movie.querySelector("h3").innerText.toLowerCase();
+                        const movieVisible = movieName.includes(searchTerm);
+
+                        if (movieVisible) {
+                            movie.style.display = "block";
+                            anyMovieVisible = true;
+                        } else {
+                            movie.style.display = "none";
+                        }
+                    });
+
+                    // Show or hide the movie category header based on visibility of movies
+                    const movieCategoryHeader = section.querySelector("h1");
+                    movieCategoryHeader.style.display = anyMovieVisible ? "block" : "none";
+                });
+            });
+        });
+
+        // Logout Pop-up
+
+        function showLogoutPopup() {
+            document.getElementById('logoutModal').style.display = 'flex';
+            document.querySelector('.body-blur').classList.add('blurred-background');
+        }
+
+        function closeLogoutPopup() {
+            document.getElementById('logoutModal').style.display = 'none';
+            document.querySelector('.body-blur').classList.remove('blurred-background');
+        }
+
+        function logout() {
+            window.location.href = "/MusicProject/User-Credentials/Login-Page.html";
+        }
+    </script>
+
+
+</head>
+
+<body>
+    <!-- Logout Pop-up -->
+
+    <div id="logoutModal" class="modal">
+        <div class="modal-content">
+            <p>Are you sure you want to logout?</p>
+            <button onclick="logout()">Logout</button>
+            <button onclick="closeLogoutPopup()">Cancel</button>
+        </div>
+    </div>
+
+    <div class="body-blur">
+
+        <!-- Header and Navigation -->
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <ul class="nav-list">
+                    <li class="nav-logo"><img src="/MusicProject/Assets/Background/Logo.png"
+                            alt="app-logo"><span>Streamify</span></li>
+                </ul>
+            </ul>
+            <ul class="nav-list">
+                <li><a href="#">Movies</a></li>
+                <li><a href="#">Originals</a></li>
+                <li><a href="#">Series</a></li>
+            </ul>
+            <ul class="nav-list">
+                <li class="search-form">
+                    <form action="#">
+                        <input type="text" name="search" id="search" placeholder="Search Your Favourites">
+                        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                </li>
+                <li>
+                    <a href="/MusicProject/Songs-Page/Songs-MainPage.html" class="switch-songs">
+                        <i class="fas fa-music"></i>
+                    </a>
+                </li>
+                <li>
+                    <i class="mode-switch" onclick="toggleMode()"><i class="fas fa-moon"></i></i>
+                </li>
+                <li>
+                    <i class="fa-solid fa-power-off" onclick="showLogoutPopup()"></i>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Sidebar for Browse Tabs -->
+        <div class="sidebar">
+            <ul class="browse-list">
+                <li><a href="#action">Action</a></li>
+                <li><a href="#romance">Romance</a></li>
+                <li><a href="#tv-shows">Tv Shows</a></li>
+                <li><a href="#documentaries">Documentaries</a></li>
+                <li><a href="#animation">Animation</a></li>
+            </ul>
+        </div>
+
+        <main>
+            <!-- Movies -->
+
+            <div class="movies" id="action">
+                <h1>Action Movies ></h1>
+                <div class="movie-list">
+                    <div class="movie">
+                        <a href="/MusicProject/Movies-Page/Action-Movies/Maanaadu-Movie.html">
+                            <img src="/MusicProject/Assets/Movies-Container/Movies-Card/Action-Movies-01.jpg"
+                                alt="Action Movie 1">
+                            <h3>Maanaadu</h3>
+                        </a>
+                    </div>
+                    <div class="movie">
+                        <a href="/MusicProject/Movies-Page/Action-Movies/Mahaan-Movie.html">
+                            <img src="/MusicProject/Assets/Movies-Container/Movies-Card/Action-Movies-02.jpg"
+                                alt="Action Movie 2">
+                            <h3>Mahaan</h3>
+                        </a>
+                    </div>
+                    <div class="movie">
+                        <a href="/MusicProject/Movies-Page/Action-Movies/Kaithi-Movie.html">
+                            <img src="/MusicProject/Assets/Movies-Container/Movies-Card/Action-Movies-03.jpg"
+                                alt="Action Movie 3">
+                            <h3>Kaithi</h3>
+                        </a>
+                    </div>
+                    <div class="movie">
+                        <a href="/MusicProject/Movies-Page/Action-Movies/Beast-Movie.html">
+                            <img src="/MusicProject/Assets/Movies-Container/Movies-Card/Action-Movies-04.jpg"
+                                alt="Action Movie 4">
+                            <h3>Beast</h3>
+                        </a>
+                    </div>
+                    <div class="movie">
+                        <a href="/MusicProject/Movies-Page/Action-Movies/Thunivu-Movie.html">
+                            <img src="/MusicProject/Assets/Movies-Container/Movies-Card/Action-Movies-05.jpg"
+                                alt="Action Movie 5">
+                            <h3>Thunivu</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="movies" id="romance">
+                <h1>Romance Movies ></h1>
+                <div class="movie-list">
+                    <div class="movie">
+                        <a href="/MusicProject/Movies-Page/Romantic-Movies/Bachelor-Movie.html">
+                            <img src="/MusicProject/Assets/Movies-Container/Movies-Card/Romantic-Movies-01.jpg"
+                                alt="Romance Movie 1">
+                            <h3>Bachelor</h3>
+                        </a>
+                    </div>
+                    <div class="movie">
+                        <a href="/MusicProject/Movies-Page/Romantic-Movies/GoodNight-Movie.html">
+                            <img src="/MusicProject/Assets/Movies-Container/Movies-Card/Romantic-Movies-02.jpg"
+                                alt="Romance Movie 2">
+                            <h3>Good Night</h3>
+                        </a>
+                    </div>
+                    <div class="movie">
+                        <a href="/MusicProject/Movies-Page/Romantic-Movies/Thiruchitrambalam-Movie.html">
+                            <img src="/MusicProject/Assets/Movies-Container/Movies-Card/Romantic-Movies-03.jpg"
+                                alt="Romance Movie 3">
+                            <h3>Thiruchitrambalam</h3>
+                        </a>
+                    </div>
+                    <div class="movie">
+                        <a href="/MusicProject/Movies-Page/Romantic-Movies/96-Movie.html">
+                            <img src="/MusicProject/Assets/Movies-Container/Movies-Card/Romantic-Movies-04.jpg"
+                                alt="Romance Movie 4">
+                            <h3>96</h3>
+                        </a>
+                    </div>
+                    <div class="movie">
+                        <a href="/MusicProject/Movies-Page/Romantic-Movies/SabaNayagan-Movie.html">
+                            <img src="/MusicProject/Assets/Movies-Container/Movies-Card/Romantic-Movies-05.jpg"
+                                alt="Romance Movie 5">
+                            <h3>Saba Nayagan</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="movies" id="tv-shows">
+                <h1>Web Series ></h1>
+                <div class="movie-list">
+                    <div class="movie">
+                        <a href="/MusicProject/Movies-Page/Web-Series/PaperRocket-Series.html">
+                            <img src="/MusicProject/Assets/Movies-Container/Movies-Card/Web-Series-01.jpg"
+                                alt="web series 1">
+                            <h3>Paper Rocket</h3>
+                        </a>
+                    </div>
+                    <div class="movie">
+                        <a href="/MusicProject/Movies-Page/Web-Series/Farzi-Series.html">
+                            <img src="/MusicProject/Assets/Movies-Container/Movies-Card/Web-Series-02.jpg"
+                                alt="web series 2">
+                            <h3>Farzi</h3>
+                        </a>
+                    </div>
+                    <div class="movie">
+                        <a href="/MusicProject/Movies-Page/Web-Series/Vadhandhi-Series.html">
+                            <img src="/MusicProject/Assets/Movies-Container/Movies-Card/Web-Series-03.jpg"
+                                alt="web series 3">
+                            <h3>Vadhandhi</h3>
+                        </a>
+                    </div>
+                    <div class="movie">
+                        <a href="/MusicProject/Movies-Page/Web-Series/NovemberStory-Series.html">
+                            <img src="/MusicProject/Assets/Movies-Container/Movies-Card/Web-Series-04.jpg"
+                                alt="web series 4">
+                            <h3>November Story</h3>
+                        </a>
+                    </div>
+                    <div class="movie">
+                        <a href="/MusicProject/Movies-Page/Web-Series/Ayali-Series.html">
+                            <img src="/MusicProject/Assets/Movies-Container/Movies-Card/Web-Series-05.jpg"
+                                alt="web series 5">
+                            <h3>Ayali</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="movies" id="documentaries">
+                <h1>Documentary Movies ></h1>
+                <div class="movie-list">
+                    <div class="movie">
+                        <a href="/MusicProject/Movies-Page/Documentry-Movies/SooraraiPottru-Movie.html">
+                            <img src="/MusicProject/Assets/Movies-Container/Movies-Card/Documentary-Movies-01.jpg"
+                                alt="Documentaries 1">
+                            <h3>Soorarai Pottru</h3>
+                        </a>
+                    </div>
+                    <div class="movie">
+                        <a href="/MusicProject/Movies-Page/Documentry-Movies/M.S.Dhoni-Movie.html">
+                            <img src="/MusicProject/Assets/Movies-Container/Movies-Card/Documentary-Movies-02.jpg"
+                                alt="Documentaries 2">
+                            <h3>M.S. Dhoni: The Untold Story</h3>
+                        </a>
+                    </div>
+                    <div class="movie">
+                        <a href="/MusicProject/Movies-Page/Documentry-Movies/Star-Movie.html">
+                            <img src="/MusicProject/Assets/Movies-Container/Movies-Card/Documentary-Movies-03.jpg"
+                                alt="Documentaries 3">
+                            <h3>Star</h3>
+                        </a>
+                    </div>
+                    <div class="movie">
+                        <a href="/MusicProject/Movies-Page/Documentry-Movies/SarpattaParambarai-Movie.html">
+                            <img src="/MusicProject/Assets/Movies-Container/Movies-Card/Documentary-Movies-04.jpg"
+                                alt="Documentaries 4">
+                            <h3>Sarpatta Parambarai</h3>
+                        </a>
+                    </div>
+                    <div class="movie">
+                        <a href="/MusicProject/Movies-Page/Documentry-Movies/12thFail-Movie.html">
+                            <img src="/MusicProject/Assets/Movies-Container/Movies-Card/Documentary-Movies-05.jpg"
+                                alt="Documentaries 5">
+                            <h3>12th Fail</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="movies" id="animation">
+                <h1>Animation Movies ></h1>
+                <div class="movie-list">
+                    <div class="movie">
+                        <a href="/MusicProject/Movies-Page/Animation-Movies/Luca-Movie.html">
+                            <img src="/MusicProject/Assets/Movies-Container/Movies-Card/Animation-Movies-01.jpg"
+                                alt="Animation Movie 1">
+                            <h3>Luca</h3>
+                        </a>
+                    </div>
+                    <div class="movie">
+                        <a href="/MusicProject/Movies-Page/Animation-Movies/TheMitchellsvs.theMachines-Movie.html">
+                            <img src="/MusicProject/Assets/Movies-Container/Movies-Card/Animation-Movies-02.jpg"
+                                alt="Animation Movie 2">
+                            <h3>The Mitchells vs. the Machines</h3>
+                        </a>
+                    </div>
+                    <div class="movie">
+                        <a href="/MusicProject/Movies-Page/Animation-Movies/Spider-ManIntotheSpider-Verse-Movie.html">
+                            <img src="/MusicProject/Assets/Movies-Container/Movies-Card/Animation-Movies-03.jpg"
+                                alt="Animation Movie 3">
+                            <h3>Spider-Man Into the Spider-Verse</h3>
+                        </a>
+                    </div>
+                    <div class="movie">
+                        <a href="/MusicProject/Movies-Page/Animation-Movies/OrionandtheDark-Movie.html">
+                            <img src="/MusicProject/Assets/Movies-Container/Movies-Card/Animation-Movies-04.jpg"
+                                alt="Animation Movie 4">
+                            <h3>Orion and the Dark</h3>
+                        </a>
+                    </div>
+                    <div class="movie">
+                        <a href="/MusicProject/Movies-Page/Animation-Movies/RayaandtheLastDragon-Movie.html">
+                            <img src="/MusicProject/Assets/Movies-Container/Movies-Card/Animation-Movies-05.jpg"
+                                alt="Animation Movie 5">
+                            <h3>Raya and the Last Dragon</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="/MusicProject/Assets/Background/Logo.png" alt="app-logo">
+                    <h2>Streamify</h2>
+                </div>
+                <div class="footer-links">
+                    <h3>Browse Playlist</h3>
+                    <ul>
+                        <li><a href="#action">Action</a></li>
+                        <li><a href="#romance">Romance</a></li>
+                        <li><a href="#tv-shows">Tv Shows</a></li>
+                        <li><a href="#documentaries">Documentaries</a></li>
+                        <li><a href="#animation">Animation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Connect with Us</h3>
+                    <ul>
+                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+                <div class="footer-subscribe">
+                    <h3>Subscribe to Our Newsletter</h3>
+                    <form action="#">
+                        <input type="email" name="email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </footer>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Streamify&trade;. All Rights Reserved. Developed by Bhadrinath P S</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
