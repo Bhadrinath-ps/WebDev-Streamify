@@ -21,7 +21,7 @@
 }
 
 body {
-    background-image: url("/MusicProject/Assets/Background/Dark-Mode.jpg");
+    background-image: url("/WebDev-Streamify/Assets/Background/Dark-Mode.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: multiply;
