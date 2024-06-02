@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="/MusicProject/Assets/Background/Tab-Icon.png" type="image/x-icon">
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background-image: url("/MusicProject/Assets/Background/Background.jpg");
+            background-color: rgba(0, 0, 0, 0.70);
+            background-blend-mode: multiply;
+            background-size: 110%;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 95vh;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 21px;
+            color: #fff;
+        }
+
+        fieldset {
+            border: 2px solid #b5a4a4;
+            background-color: rgba(0, 0, 0, 0.500);
+            border-radius: 12px;
+            padding: 20px 30px;
+            width: 360px;
+            box-shadow: 2px 0px 18px rgba(231, 31, 4, 0.814);
+        }
+
+        legend {
+            font-size: 21px;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 4px;
+            padding: 0px 2.4px 0px 6px;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 14.4px;
+            margin: -10.5px 0 12.5px 0;
+        }
+
+        .input-container {
+            position: relative;
+            margin-bottom: 10px;
+        }
+
+        .input-container input {
+            width: 100%;
+            padding: 11px 12px 11px 36px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 16px;
+            border-radius: 6px;
+            background-color: rgba(0, 0, 0, 0.500);
+            color: #fadede;
+            outline: none;
+        }
+
+        .label {
+            position: absolute;
+            top: 11px;
+            left: 43.8px;
+            font-size: 16px;
+            color: #666;
+            transition: all 0.5s;
+            pointer-events: none;
+            width: 70px;
+        }
+
+        .input:focus+.label,
+        .input:not(:placeholder-shown)+.label {
+            left: 50%;
+            transform: translate(-50%, -22px);
+            color: #fff;
+            background-color: transparent;
+            width: 105px;
+        }
+
+        .input-container .fas {
+            position: absolute;
+            font-size: 16.8px;
+            margin: 15px 2px 0px 13px;
+            color: #ffffff50;
+        }
+
+        .fa-eye,
+        .fa-eye-slash {
+            position: absolute;
+            top: 15px;
+            left: 89%;
+            color: #9b9b9b;
+        }
+
+        .forgotpass {
+            color: white;
+            margin-bottom: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .forgotpass a {
+            color: #d4d5d5;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .forgotpass a:hover {
+            color: rgba(212, 213, 213, 0.80);
+        }
+
+        button {
+            padding: 8px 19px;
+            border: none;
+            border-radius: 48px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #fff;
+            cursor: pointer;
+            background-color: rgb(225, 9, 9);
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: rgb(153, 6, 6);
+        }
+
+        .signup p {
+            margin: 16.8px 6px 4px;
+            color: white;
+            display: inline-block;
+        }
+
+        .signup a {
+            color: #5b4be7;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .signup a:hover {
+            color: #87ceeb;
+        }
+    </style>
+
+    <script>
+
+        function validateForm() {
+            var db = {
+                "Badhri": "Badhri@17",
+                "Dhaaru": "Dhaaru$15"
+            }
+
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            var key_user = Object.keys(db);
+            var valid = false;
+
+            for (var i = 0; i < key_user.length; i++) {
+                if (key_user[i] == username) {
+                    if (db[username] == password) {
+                        valid = true;
+                    }
+                }
+            }
+
+            if (valid) {
+                window.location.href = "./Welcome-Page.html";
+            } else {
+                document.getElementsByClassName("error-message")[0].innerHTML = "Invalid Username or Incorrect Password";
+            }
+
+            return false;
+        }
+
+        function togglePassword() {
+            var passwordInput = document.getElementById("password");
+            var togglePassword = document.getElementById("togglePassword");
+
+            var type = passwordInput.type === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+
+            if (passwordInput.type === 'password') {
+                togglePassword.innerHTML = '<i class="fa fa-eye"></i>';
+            }
+            else {
+                togglePassword.innerHTML = '<i class="fa fa-eye-slash"></i>';
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <fieldset>
+            <legend>Login</legend>
+            <form onsubmit="return validateForm()">
+                <div class="error-message"></div>
+                <div class="input-container">
+                    <i class="fas fa-user"></i>
+                    <input type="text" class="input" placeholder=" " id="username">
+                    <label class="label" for="username">Username</label>
+                </div>
+                <div class="input-container">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" class="input" placeholder=" " id="password">
+                    <label class="label" for="password">Password</label>
+                    <span id="togglePassword" onclick="togglePassword()">
+                        <i class="fa fa-eye"></i>
+                    </span>
+                </div>
+                <div class="forgotpass">
+                    <a href="/MusicProject/User-Credentials/Login-SubPages/Forgot-Password.html">Forgot Password?</a>
+                </div>
+                <button>Login</button>
+            </form>
+            <div class="signup">
+                <p>Are you a new user?</p> <a href="/MusicProject/User-Credentials/Signup-Page.html">Signup</a>
+            </div>
+        </fieldset>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leo Album</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="shortcut icon" href="/MusicProject/Assets/Background/Tab-Icon.png" type="image/x-icon">
+    
+    <style>
+        body {
+            background-image: url("/MusicProject/Assets/Songs-Container/Songs-BG/Leo.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-blend-mode: multiply;
+            background-color: rgba(0, 0, 0, 0.81);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <nav class="main-nav">
+        <ul class="nav-list">
+            <li class="nav-logo"><img src="/MusicProject/Assets/Background/Logo.png"
+                alt="app-logo"><span>Streamify</span></li>
+        </ul>
+        <ul class="nav-list">
+            <li><a href="#">Browse</a></li>
+            <li><a href="#">Radio</a></li>
+            <li><a href="#">Library</a></li>
+        </ul>
+        <ul class="nav-list">
+            <li class="search-form">
+                <form action="">
+                    <input type="text" name="search" id="search" placeholder="Search Your Favourites">
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+
+    <div class="container">
+
+        <!-- Featured Album Section -->
+        <div class="featured-album">
+            <img src="/MusicProject/Assets/Songs-Container/Songs-Card/New-Releases-04.jpg" alt="Leo"
+                class="album-cover-main">
+            <div class="album-details">
+                <h2 class="album-title-main">Leo</h2>
+                <p class="album-description-main">Hero is a cafe owner, who fends off a gang of murderous thugs and
+                    gains attention from a drug cartel claiming he was once a part of them.
+                </p>
+                <p class="album-info">The most popular songs from Leo are Bloody Sweet, Glimpse of Antony
+                    Das, Anbenum, Badass.</p>
+                <p class="album-info">by Anirudh Ravichander · 7 Songs · 49,603,658 Plays · 17:35</p>
+            </div>
+        </div>
+
+        <div class="artist-songs">
+            <!-- Featured Artists Section -->
+            <div class="featured-artists">
+                <h2 class="section-title">Featured Artists</h2>
+                <div class="artist">
+                    <img src="/MusicProject/Assets/Songs-Container/Artist/Artist-AnirudhRavichander.jpg" alt="JakesBejoy"
+                        class="artist-image">
+                    <p class="artist-name-title">Anirudh Ravichander</p>
+                </div>
+                <div class="artist">
+                    <img src="/MusicProject/Assets/Songs-Container/Artist/Artist-Vijay.jpg" alt="ShaanRahman"
+                        class="artist-image">
+                    <p class="artist-name-title">Vijay</p>
+                </div>
+                <div class="artist">
+                    <img src="/MusicProject/Assets/Songs-Container/Artist/Artist-Lothika.jpg"
+                        alt="HarithaBalakrishnan" class="artist-image">
+                    <p class="artist-name-title">Lothika</p>
+                </div>
+                <div class="artist">
+                    <img src="/MusicProject/Assets/Songs-Container/Artist/Artist-SiddharthBasrur.jpg" alt="KapilKapilan"
+                        class="artist-image">
+                    <p class="artist-name-title">Siddharth Basrur</p>
+                </div>
+                <div class="artist">
+                    <img src="/MusicProject/Assets/Songs-Container/Artist/Artist-AsalKolaar.jpg" alt="ResmiSateesh"
+                        class="artist-image">
+                    <p class="artist-name-title">Asal Kolaar</p>
+                </div>
+            </div>
+
+            <!-- Audio Player Section -->
+            <div class="audio-player">
+                <div class="audio-info">
+                    <h2 class="audio-title">Album Songs</h2>
+
+                    <div class="top-section">
+                        <img src="/MusicProject/Assets/Songs-Container/Songs-Card/New-Releases-04.jpg" alt="Album Cover"
+                            class="album-cover">
+                        <div class="song-info">
+                            <h2 class="song-title">Anbenum</h2>
+                            <p class="artist-name">Anirudh Ravichander, Lothika</p>
+                        </div>
+                        <div class="audio-controls">
+                            <audio src="/MusicProject/Assets/Songs/Leo/Anbenum-MassTamilan.dev.mp3"
+                                controls></audio>
+                        </div>
+                    </div>
+
+                    <div class="top-section">
+                        <img src="/MusicProject/Assets/Songs-Container/Songs-Card/New-Releases-04.jpg" alt="Album Cover"
+                            class="album-cover">
+                        <div class="song-info">
+                            <h2 class="song-title">Badass</h2>
+                            <p class="artist-name">Anirudh Ravichander</p>
+                        </div>
+                        <div class="audio-controls">
+                            <audio src="/MusicProject/Assets/Songs/Leo/Badass-MassTamilan.dev.mp3"
+                                controls></audio>
+                        </div>
+                    </div>
+
+                    <div class="top-section">
+                        <img src="/MusicProject/Assets/Songs-Container/Songs-Card/New-Releases-04.jpg" alt="Album Cover"
+                            class="album-cover">
+                        <div class="song-info">
+                            <h2 class="song-title">Bloody Sweet</h2>
+                            <p class="artist-name">Anirudh Ravichander, Siddharth Basrur</p>
+                        </div>
+                        <div class="audio-controls">
+                            <audio
+                                src="/MusicProject/Assets/Songs/Leo/Bloody-Sweet-MassTamilan.dev.mp3"
+                                controls></audio>
+                        </div>
+                    </div>
+
+                    <div class="top-section">
+                        <img src="/MusicProject/Assets/Songs-Container/Songs-Card/New-Releases-04.jpg" alt="Album Cover"
+                            class="album-cover">
+                        <div class="song-info">
+                            <h2 class="song-title">Glimpse of Antony Das</h2>
+                            <p class="artist-name">Anirudh Ravichander</p>
+                        </div>
+                        <div class="audio-controls">
+                            <audio
+                                src="/MusicProject/Assets/Songs/Leo/Glimpse-of-Antony-Das-MassTamilan.dev.mp3"
+                                controls></audio>
+                        </div>
+                    </div>
+
+                    <div class="top-section">
+                        <img src="/MusicProject/Assets/Songs-Container/Songs-Card/New-Releases-04.jpg" alt="Album Cover"
+                            class="album-cover">
+                        <div class="song-info">
+                            <h2 class="song-title">Glimpse of Harold Das</h2>
+                            <p class="artist-name">Anirudh Ravichander</p>
+                        </div>
+                        <div class="audio-controls">
+                            <audio src="/MusicProject/Assets/Songs/Leo/Glimpse-of-Harold-Das-MassTamilan.dev.mp3"
+                                controls></audio>
+                        </div>
+                    </div>
+
+                    <div class="top-section">
+                        <img src="/MusicProject/Assets/Songs-Container/Songs-Card/New-Releases-04.jpg" alt="Album Cover"
+                            class="album-cover">
+                        <div class="song-info">
+                            <h2 class="song-title">Lokiverse 2.0</h2>
+                            <p class="artist-name">Anirudh Ravichander</p>
+                        </div>
+                        <div class="audio-controls">
+                            <audio src="/MusicProject/Assets/Songs/Leo/Lokiverse-2.0-MassTamilan.dev.mp3"
+                                controls></audio>
+                        </div>
+                    </div>
+
+                    <div class="top-section">
+                        <img src="/MusicProject/Assets/Songs-Container/Songs-Card/New-Releases-04.jpg" alt="Album Cover"
+                            class="album-cover">
+                        <div class="song-info">
+                            <h2 class="song-title">Naa Ready</h2>
+                            <p class="artist-name">Anirudh Ravichander, Vijay, Asal Kolaar</p>
+                        </div>
+                        <div class="audio-controls">
+                            <audio src="/MusicProject/Assets/Songs/Leo/Naa-Ready-MassTamilan.dev.mp3"
+                                controls></audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- About Album Section -->
+        <div class="about-album">
+            <img src="/MusicProject/Assets/Songs-Container/Songs-Card/Leo-01.jpg" alt="Leo" class="album-image">
+            <div class="album-info">
+                <img src="/MusicProject/Assets/Songs-Container/Double-Quotes.png" style="margin-top: 7px;" alt="Double-Quotes">
+                <h2 class="album-title">About Leo</h2>
+                <p class="album-description"> Tune into the Leo with 7 trending songs that let you enjoy
+                    diverse
+                    genres of music. Streamify Music lets you play MP3 songs of Leo online for free or you can
+                    download
+                    songs for offline listening.</p>
+                <p class="album-description">Engross yourself into the best Leo songs on Streamify music and
+                    create
+                    your own multiverse of madness by personalized playlist for a seamless experience. Look out for all
+                    the new album releases on Streamify and Keep Streamifyng!! </p>
+            </div>
+        </div>
+
+        <!-- Other New Releases Section -->
+
+        <div class="other-releases" id="other-releases">
+            <h1>Other New Releases ></h1>
+            <div class="card-container">
+                <a href="/MusicProject/Songs-Page/New-Releases/Joe.html" class="card">
+                    <img src="/MusicProject/Assets/Songs-Container/Songs-Card/New-Releases-01.jpg" alt="New Releases 1">
+                    <p>Joe</p>
+                </a>
+                <a href="/MusicProject/Songs-Page/New-Releases/Lover.html" class="card">
+                    <img src="/MusicProject/Assets/Songs-Container/Songs-Card/New-Releases-02.jpg" alt="New Releases 2">
+                    <p>Lover</p>
+                </a>
+                <a href="/MusicProject/Songs-Page/New-Releases/KingOfKotha.html" class="card">
+                    <img src="/MusicProject/Assets/Songs-Container/Songs-Card/New-Releases-03.jpg" alt="New Releases 3">
+                    <p>King Of Kotha</p>
+                </a>
+                <a href="/MusicProject/Songs-Page/New-Releases/Leo.html" class="card">
+                    <img src="/MusicProject/Assets/Songs-Container/Songs-Card/New-Releases-04.jpg" alt="New Releases 4">
+                    <p>Leo</p>
+                </a>
+                <a href="/MusicProject/Songs-Page/New-Releases/Jailer.html" class="card">
+                    <img src="/MusicProject/Assets/Songs-Container/Songs-Card/New-Releases-05.jpg" alt="New Releases 5">
+                    <p>Jailer</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

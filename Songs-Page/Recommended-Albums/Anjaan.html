@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anjaan Album</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="shortcut icon" href="/MusicProject/Assets/Background/Tab-Icon.png" type="image/x-icon">
+    
+    <style>
+        body {
+            background-image: url("/MusicProject/Assets/Songs-Container/Songs-BG/Anjaan.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-blend-mode: multiply;
+            background-color: rgba(0, 0, 0, 0.81);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <nav class="main-nav">
+        <ul class="nav-list">
+            <li class="nav-logo"><img src="/MusicProject/Assets/Background/Logo.png"
+                alt="app-logo"><span>Streamify</span></li>
+        </ul>
+        <ul class="nav-list">
+            <li><a href="#">Browse</a></li>
+            <li><a href="#">Radio</a></li>
+            <li><a href="#">Library</a></li>
+        </ul>
+        <ul class="nav-list">
+            <li class="search-form">
+                <form action="">
+                    <input type="text" name="search" id="search" placeholder="Search Your Favourites">
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+
+    <div class="container">
+
+        <!-- Featured Album Section -->
+        <div class="featured-album">
+            <img src="/MusicProject/Assets/Songs-Container/Songs-Card/Recommended-Album-02.jpg" alt="Anjaan"
+                class="album-cover-main">
+            <div class="album-details">
+                <h2 class="album-title-main">Anjaan</h2>
+                <p class="album-description-main">Krishna comes to Mumbai in search of his brother Raju Bhai, an
+                    underworld don. Through Raju Bhai's gangster friends, his past life is revealed.</p>
+                <p class="album-info">The most popular songs from Anjaan are Bang Bang Bang, Oru Kan Jaadai, Ek Do Teen
+                    and
+                    Kadhal Aasai.</p>
+                <p class="album-info">by Yuvan Shankar Raja · 5 Songs · 8,708,789 Plays · 22:10</p>
+            </div>
+        </div>
+
+        <div class="artist-songs">
+            <!-- Featured Artists Section -->
+            <div class="featured-artists">
+                <h2 class="section-title">Featured Artists</h2>
+
+                <div class="artist">
+                    <img src="/MusicProject/Assets/Songs-Container/Artist/Artist-YuvanShankarRaja.jpg"
+                        alt="YuvanShankarRaja" class="artist-image">
+                    <p class="artist-name-title">Yuvan Shankar Raja</p>
+                </div>
+                <div class="artist">
+                    <img src="/MusicProject/Assets/Songs-Container/Artist/Artist-K.G.Ranjith.jpg" alt="K.G.Ranjith"
+                        class="artist-image">
+                    <p class="artist-name-title">K.G.Ranjith</p>
+                </div>
+                <div class="artist">
+                    <img src="/MusicProject/Assets/Songs-Container/Artist/Artist-AndreaJeremiah.jpg"
+                        alt="AndreaJeremiah" class="artist-image">
+                    <p class="artist-name-title">Andrea Jeremiah</p>
+                </div>
+                <div class="artist">
+                    <img src="/MusicProject/Assets/Songs-Container/Artist/Artist-SwethaPandit.jpg" alt="SwethaPandit"
+                        class="artist-image">
+                    <p class="artist-name-title">Swetha Pandit</p>
+                </div>
+            </div>
+
+            <!-- Audio Player Section -->
+            <div class="audio-player">
+                <div class="audio-info">
+                    <h2 class="audio-title">Album Songs</h2>
+
+                    <div class="top-section">
+                        <img src="/MusicProject/Assets/Songs-Container/Songs-Card/Recommended-Album-02.jpg"
+                            alt="Album Cover" class="album-cover">
+                        <div class="song-info">
+                            <h2 class="song-title">Bang Bang Bang</h2>
+                            <p class="artist-name">K.G.Ranjith</p>
+                        </div>
+                        <div class="audio-controls">
+                            <audio src="/MusicProject/Assets/Songs/Anjaan/Bang-Bang-Bang.mp3" controls></audio>
+                        </div>
+                    </div>
+
+                    <div class="top-section">
+                        <img src="/MusicProject/Assets/Songs-Container/Songs-Card/Recommended-Album-02.jpg"
+                            alt="Album Cover" class="album-cover">
+                        <div class="song-info">
+                            <h2 class="song-title">Ek Do Theen</h2>
+                            <p class="artist-name">Surya, Andrea Jeremiah</p>
+                        </div>
+                        <div class="audio-controls">
+                            <audio src="/MusicProject/Assets/Songs/Anjaan/Ek-Do-Theen.mp3" controls></audio>
+                        </div>
+                    </div>
+
+                    <div class="top-section">
+                        <img src="/MusicProject/Assets/Songs-Container/Songs-Card/Recommended-Album-02.jpg"
+                            alt="Album Cover" class="album-cover">
+                        <div class="song-info">
+                            <h2 class="song-title">Kadhal Aasai</h2>
+                            <p class="artist-name">Yuvan Shankar Raja, Sooraj Santhosh</p>
+                        </div>
+                        <div class="audio-controls">
+                            <audio src="/MusicProject/Assets/Songs/Anjaan/Kadhal-Aasai.mp3" controls></audio>
+                        </div>
+                    </div>
+
+                    <div class="top-section">
+                        <img src="/MusicProject/Assets/Songs-Container/Songs-Card/Recommended-Album-02.jpg"
+                            alt="Album Cover" class="album-cover">
+                        <div class="song-info">
+                            <h2 class="song-title">Oru Kan Jaadai</h2>
+                            <p class="artist-name">Benny Dayal, Swetha Pandit</p>
+                        </div>
+                        <div class="audio-controls">
+                            <audio src="/MusicProject/Assets/Songs/Anjaan/Oru-Kan-Jaadai.mp3" controls></audio>
+                        </div>
+                    </div>
+
+                    <div class="top-section">
+                        <img src="/MusicProject/Assets/Songs-Container/Songs-Card/Recommended-Album-02.jpg"
+                            alt="Album Cover" class="album-cover">
+                        <div class="song-info">
+                            <h2 class="song-title">Sirippu En</h2>
+                            <p class="artist-name">M.M.Manasi</p>
+                        </div>
+                        <div class="audio-controls">
+                            <audio src="/MusicProject/Assets/Songs/Anjaan/Sirippu-En.mp3" controls></audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- About Album Section -->
+        <div class="about-album">
+            <img src="/MusicProject/Assets/Songs-Container/Songs-Card/Recommended-Album-02.jpg" alt="Anjaan"
+                class="album-image">
+            <div class="album-info">
+                <img src="/MusicProject/Assets/Songs-Container/Double-Quotes.png" alt="Double-Quotes"
+                    style="position: absolute; margin-top: -10.8%;">
+                <h2 class="album-title">About Anjaan</h2>
+                <p class="album-description">Tune into the Anjaan with 5 trending songs that let you enjoy diverse
+                    genres
+                    of music. Streamify Music lets you play MP3 songs of Anjaan online for free or you can download
+                    songs
+                    for offline listening.</p>
+                <p class="album-description">Engross yourself into the best Anjaan songs on Streamify music and create
+                    your
+                    own
+                    multiverse of madness by personalized playlist for a seamless experience. Look out for all the new
+                    album releases on Streamify and Keep Streamifyng!!</p>
+            </div>
+        </div>
+
+        <!-- Other New Releases Section -->
+
+        <div class="other-releases" id="other-releases">
+            <h1>Other Recommended Albums ></h1>
+            <div class="card-container">
+                <a href="/MusicProject/Songs-Page/Recommended-Albums/Maryan.html" class="card">
+                    <img src="/MusicProject/Assets/Songs-Container/Songs-Card/Recommended-Album-01.jpg"
+                        alt="Recommended Album 1">
+                    <p>Maryan</p>
+                </a>
+                <a href="/MusicProject/Songs-Page/Recommended-Albums/Anjaan.html" class="card">
+                    <img src="/MusicProject/Assets/Songs-Container/Songs-Card/Recommended-Album-02.jpg"
+                        alt="Recommended Album 2">
+                    <p>Anjaan</p>
+                </a>
+                <a href="/MusicProject/Songs-Page/Recommended-Albums/Master.html" class="card">
+                    <img src="/MusicProject/Assets/Songs-Container/Songs-Card/Recommended-Album-03.jpg"
+                        alt="Recommended Album 3">
+                    <p>Master</p>
+                </a>
+                <a href="/MusicProject/Songs-Page/Recommended-Albums/Manithan.html" class="card">
+                    <img src="/MusicProject/Assets/Songs-Container/Songs-Card/Recommended-Album-04.jpg"
+                        alt="Recommended Album 4">
+                    <p>Manithan</p>
+                </a>
+                <a href="/MusicProject/Songs-Page/Recommended-Albums/Vikram.html" class="card">
+                    <img src="/MusicProject/Assets/Songs-Container/Songs-Card/Recommended-Album-05.jpg"
+                        alt="Recommended Album 5">
+                    <p>Vikram</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

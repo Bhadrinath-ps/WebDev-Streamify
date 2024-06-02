@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp Page</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="/MusicProject/Assets/Background/Tab-Icon.png" type="image/x-icon">
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background-image: url("/MusicProject/Assets/Background/Background.jpg");
+            background-color: rgba(0, 0, 0, 0.70);
+            background-blend-mode: multiply;
+            background-size: 110%;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 95vh;
+        }
+
+        .container {
+            text-align: center;
+            margin: auto;
+        }
+
+        h1 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        form {
+            width: 400px;
+        }
+
+        fieldset {
+            border: 2px solid #b5a4a4;
+            background-color: rgba(0, 0, 0, 0.500);
+            border-radius: 10px;
+            padding: 20px 40px;
+            box-shadow: 2px 0px 15px rgba(231, 31, 4, 0.814);
+        }
+
+        legend {
+            font-size: 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 4px;
+            padding: 0px 2px 0px 5px;
+            color: white;
+            margin-bottom: 5px;
+        }
+
+        .form-group {
+            position: relative;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px 0 10px 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 16px;
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fadede;
+            outline: none;
+        }
+
+        .form-group label {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 16px;
+            color: #666;
+            transition: all 0.5s;
+            pointer-events: none;
+        }
+
+        .form-group input:focus+label,
+        .form-group input:not(:placeholder-shown)+label {
+            transform: translate(-50%, -22px);
+            left: 50%;
+            color: #fff;
+        }
+
+        .fa-eye,
+        .fa-eye-slash {
+            position: absolute;
+            top: 15px;
+            left: 90%;
+            color: #9b9b9b;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 14px;
+        }
+
+        button {
+            margin: 8px 0px 0px 0px;
+            padding: 10px 14px;
+            border: none;
+            border-radius: 40px;
+            background-color: rgb(225, 9, 9);
+            font-size: 14px;
+            font-weight: 600;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: rgb(153, 6, 6);
+        }
+
+        a {
+            font-size: 17px;
+            color: #5b4be7;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #87ceeb;
+        }
+
+        .container p {
+            margin-top: 14px;
+            color: white;
+        }
+    </style>
+
+    <script>
+        function validateForm() {
+            var username = document.getElementById("Username").value;
+            var email = document.getElementById("Email").value;
+            var phoneno = document.getElementById("PhoneNumber").value;
+            var password = document.getElementById("Password").value;
+            var cpassword = document.getElementById("ConfirmPassword").value;
+
+            var valid = true;
+
+            //Username Validation
+
+            if (username === '') {
+                valid = false;
+                document.getElementById('usernameError').innerHTML = 'Username is required';
+            }
+            else {
+                valid = true;
+            }
+
+            //Email Validation
+
+            var emailFlag1 = false;
+            var emailFlag2 = false;
+            for (var i = 0; i <= email.length; i++) {
+                if (email[i] >= 'a' && email[i] <= 'z') {
+                    emailFlag1 = true;
+                }
+                if (email[i] == '@') {
+                    emailFlag2 = true;
+                }
+            }
+
+            if (email === '') {
+                valid = false;
+                document.getElementById('emailError').innerHTML = 'Email is required';
+            }
+            else if (emailFlag1 == true && emailFlag2 == true) {
+                valid = true;
+            }
+            else {
+                valid = false;
+                document.getElementById('emailError').innerHTML = 'Invalid email format';
+            }
+
+            //PhoneNumber Validation
+
+            if (phoneno.length == 10 && (phoneno[0] == 6 || phoneno[0] == 7 || phoneno[0] == 8 || phoneno[0] == 9)) {
+                valid = true;
+                document.getElementById('phoneError').innerHTML = '';
+            }
+            else if (phoneno === '') {
+                valid = false;
+                document.getElementById('phoneError').innerHTML = 'Phone number is required';
+            }
+            else {
+                valid = false;
+                document.getElementById('phoneError').innerHTML = 'Invalid phone number';
+            }
+
+             // Password Validation
+             var uppercase = 0;
+            var lowercase = 0;
+            var numeric = 0;
+            var specialChar = 0;
+
+            for (var i = 0; i < password.length; i++) {
+                if (password[i] >= 'A' && password[i] <= 'Z') {
+                    uppercase++;
+                } else if (password[i] >= 'a' && password[i] <= 'z') {
+                    lowercase++;
+                } else if (password[i] >= '0' && password[i] <= '9') {
+                    numeric++;
+                } else {
+                    specialChar++;
+                }
+            }
+
+            if (password === '') {
+                valid = false;
+                document.getElementById('passwordError').innerHTML = 'Password is required';
+            } else if (password.length < 8 || password.length > 16 || lowercase < 1 || uppercase < 1 || numeric < 1 || specialChar < 1) {
+                valid = false;
+                document.getElementById('passwordError').innerHTML = 'Password is too weak';
+            }
+
+            // ConfirmPassword Validation
+            if (cpassword === '') {
+                valid = false;
+                document.getElementById('confirmPasswordError').innerHTML = 'Confirm Password is required';
+            } else if (password !== cpassword) {
+                valid = false;
+                document.getElementById('confirmPasswordError').innerHTML = 'Passwords do not match';
+            }
+
+            return valid;
+        }
+        
+        function togglePassword(inputId, toggleId) {
+            var passwordInput = document.getElementById(inputId);
+            var togglePassword = document.getElementById(toggleId);
+
+            var type = passwordInput.type === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+
+            if (passwordInput.type === 'password') {
+                togglePassword.innerHTML = '<i class="fa fa-eye"></i>';
+            } else {
+                togglePassword.innerHTML = '<i class="fa fa-eye-slash"></i>';
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <div>
+        <h1></h1>
+    </div>
+
+    <div class="container">
+        <fieldset>
+            <legend>SignUp</legend>
+
+            <form action="./Signup-SubPages/Signup-OTP-Verification.html"
+                onsubmit="return validateForm()">
+                <div class="form-group">
+                    <input type="text" id="Username" class="input" placeholder=" ">
+                    <label for="Username">Username</label>
+                    <div id="usernameError" class="error-message"></div>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="Email" class="input" placeholder=" ">
+                    <label for="Email">Email</label>
+                    <div id="emailError" class="error-message"></div>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="PhoneNumber" class="input" placeholder=" ">
+                    <label for="Phone Number">Phone Number</label>
+                    <div id="phoneError" class="error-message"></div>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="Password" class="input" placeholder=" ">
+                    <label for="Password">Password</label>
+                    <div id="passwordError" class="error-message"></div>
+                    <span id="togglePassword1" onclick="togglePassword('Password', 'togglePassword1')">
+                        <i class="fa fa-eye"></i>
+                    </span>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="ConfirmPassword" class="input" placeholder=" ">
+                    <label for="Confirm Password">Confirm Password</label>
+                    <div id="confirmPasswordError" class="error-message"></div>
+                    <span id="togglePassword2" onclick="togglePassword('ConfirmPassword', 'togglePassword2')">
+                        <i class="fa fa-eye"></i>
+                    </span>
+                </div>
+                <button>Create Account</button>
+            </form>
+            <div>
+                <p>Already have an account? <a href="/MusicProject/User-Credentials/Login-Page.html">Login</a></p>
+            </div>
+        </fieldset>
+    </div>
+</body>
+
+</html>
