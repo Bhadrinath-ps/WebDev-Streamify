@@ -44,6 +44,6 @@ Use the above credentials to access the platform directly.
 
 Feel free to customize the contact information and any other sections as needed. 🎉
 
-## Click to View My Projects
+## Click to View My Project 🎬🎵
 
 - 🌐 [Streamify - Live Demo](https://bhadrinath-ps.github.io/WebDev-Streamify/User-Credentials/Login-Page.html)
